@@ -1,0 +1,42 @@
+.reservation {
+
+    background: rgba(255, 255, 255, 0.21);
+    backdrop-filter: blur(70px);
+    border-radius: 10px;
+    max-width: 687px;
+    position: relative;
+    left: 0;
+    bottom: -85px;
+
+    @include respond-to(tablet-portrait) {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.21);
+        backdrop-filter: blur(70px);
+        border-radius: 10px;
+        bottom: -45px;
+    }
+
+    &__item {
+        padding: 24px 30px;
+
+        @include respond-to(tablet-landscape) {
+            padding: 24px 20px;
+        }
+
+        &:first-child {
+            padding-left: 49px;
+
+            @include respond-to(tablet-landscape) {
+                padding-left: 20px;
+            }
+        }
+    } 
+
+    &__button {
+        padding: 0 49px 0 30px;
+        
+        @include respond-to(tablet-landscape) {
+         padding: 0 10px;   
+        }
+    }
+}

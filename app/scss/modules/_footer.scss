@@ -1,0 +1,134 @@
+.footer {
+    padding-bottom: 145px;
+
+    @include respond-to(tablet-landscape) {
+        padding-bottom: 30px;
+    }
+
+    &__inner {
+
+        @include respond-to(desktop) {
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        display: inline-block;
+    }
+
+    &__text {
+        font-family: $p-font-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 150%;
+        color: rgba(8, 31, 50, 0.7);
+        max-width: 257px;
+        margin: 0 0 30px;
+    }
+
+    &__site {
+        margin-bottom: 15px;
+
+        &-link {
+            font-family: $p-font-normal;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 150%;
+            color: rgba(8, 31, 50, 0.7); 
+            transition: all .5s;
+
+            &:hover {
+                color: $color-denim;
+            }
+        }
+    }
+
+    &__social {
+        padding: 16px 38px 0;
+
+        &-links {
+            margin: 0 -12.5px;
+        }
+
+        &-link {
+            padding: 0 12.5px;
+        }
+
+        &-networks {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__title {
+        font-family: $p-font-normal;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: $color-black-pearl;
+        margin-bottom: 30px;
+    }
+
+    &__nav {
+        padding: 70px 38px 0;
+
+        @include respond-to(tablet-portrait) {
+            padding-top: 30px;
+        }
+        
+        &-item {
+            margin-bottom: 20px;
+        }
+
+        &-link {
+            font-family: $p-font-medium;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba(8, 31, 50, 0.7);
+            transition: all .5s;
+            &:hover {
+                color: $color-denim;
+            }
+        }
+    }
+
+    &__sub {
+        padding: 70px 0 0 20px;
+
+        @include respond-to(tablet-portrait) {
+            padding-top: 30px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__input {
+        max-width: 275px;
+        height: 57px;
+        padding: 15px 30px;
+        border-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px 0 0 5px;
+
+        @media screen and (max-width: 470px) {
+            width: 320px;
+        }
+    }
+
+    &__btn {
+        position: relative;
+        left: -10px;
+
+        @media screen and (max-width: 470px) {
+            position: static;
+            margin: 0 auto;         
+        }
+    }
+}

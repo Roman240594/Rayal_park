@@ -1,0 +1,35 @@
+.banner {
+    background-image: url(../assets/images/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 690px;
+    padding-top: 200px;
+
+    &__title {
+        font-family: $g-font-semi-bold;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 57px;
+        line-height: 120%;
+        color: $color-black-pearl;
+        max-width: 456px;
+        margin-bottom: 25px;
+
+        @include respond-to(desktop) {
+            font-size: 30px;
+        }
+
+        @media screen and (max-width:721px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        max-width: 347px;
+        margin-bottom: 30px;
+        @media screen and (max-width:721px) {
+            max-width: 450px;;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+.client {
+    padding: 140px 0;
+
+    @include respond-to(tablet-landscape) {
+        padding: 80px;
+    }
+
+    &__top {
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 60px;
+
+        @media screen and (max-width: 700px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__column {
+        margin: -15px -15px;
+        @include respond-to(desktop) {
+           justify-content: center;
+           margin: 0 -15px;
+        }
+    }
+
+    &__wrapper {
+        padding: 15px;
+    }
+
+    &__item {
+        padding: 28px 40px 27px 39px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border-radius: 10px;
+        width: 335px;
+        height: 345px;
+
+        @include respond-to(phone-only) {
+            padding: 20px 10px;
+        }
+    }
+
+    &__img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 25px;
+    }
+    &__text {
+        max-width: 281px;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto 30px;
+
+        @include respond-to(phone-only) {
+            max-width: 230px;
+        }
+
+        &::before {
+            content: '';
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            background-image: url(../assets/images/quotes-grey.svg);
+            left: 10px;
+            top: -20px;
+        }
+    }
+
+    &__name {
+        font-family: $g-font-medium;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;      
+        color: rgba(8, 31, 50, 0.7);
+        margin-bottom: 5px;
+    }
+
+    &__social {
+        font-family: $r-font-normal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 160%;
+        color: rgba(8, 31, 50, 0.7);
+    }
+}
